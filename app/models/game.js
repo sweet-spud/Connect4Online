@@ -9,6 +9,7 @@ const gameSchema = new mongoose.Schema({
   player2Id: {
     type: String,
     unique: true,
+    sparse: true,
   },
   searching: {
     type: Boolean,
