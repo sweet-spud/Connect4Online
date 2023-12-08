@@ -2,7 +2,7 @@ const NodeCache = require("node-cache");
 const cache = new NodeCache();
 
 const setGame = (id, game) => {
-  cache.set(id, game);
+  return cache.set(id, game);
 };
 
 const getGame = (id) => {
@@ -10,9 +10,11 @@ const getGame = (id) => {
 };
 
 const deleteGame = (id) => {
-  cache.del(id);
+  return cache.del(id);
 };
 
 const flush = () => {
-  cache.flushAll();
+  return cache.flushAll();
 };
+
+module.exports = { setGame, getGame, deleteGame, flush };

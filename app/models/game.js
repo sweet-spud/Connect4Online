@@ -11,6 +11,9 @@ const gameSchema = new mongoose.Schema({
     unique: true,
     sparse: true,
   },
+  yellow1: {
+    type: Boolean,
+  },
   searching: {
     type: Boolean,
     required: true,
